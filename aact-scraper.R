@@ -11,7 +11,7 @@ copies_to_download <- 10
 
 ## Number of minutes to allow for downloading of a single file (one
 ## copy of the database is about 2 GB)
-download_timeout <- 10
+download_timeout <- 30
 
 ## Base directory for where to save downloaded data (include trailing
 ## slash)
