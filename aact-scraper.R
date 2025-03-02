@@ -32,8 +32,11 @@ base_url <- "https://aact.ctti-clinicaltrials.org"
 
 ## Download the page HTML and pull out the links
 links <- page %>%
-  html_elements(".form-select option a") %>%
-  html_attr("href")
+  html_elements(".form-select option") %>%
+  html_attr("value")
+
+## Remove NA's
+links <- links[!is.na(links)]
 
 ## Remove the Covid-19 studies (redundant)
 links <- links[-grep("^/static/covid-19", links)]
