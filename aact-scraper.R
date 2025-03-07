@@ -69,7 +69,7 @@ for (i in 1:length(links)) {
 
     ## Download the file into the specified filename
     download.file(
-      paste0(base_url, links[[1]]),  
+      paste0(base_url, links[[i]]),
       paste0(base_dir, filename)
     )
     
